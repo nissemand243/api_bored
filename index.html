@@ -75,6 +75,21 @@
     <div id ="social-activity">
     </div>
 
+
+      <h4 id="fadeIn">
+        Press the button to watch the magic begin<br>
+        <a class="btn-floating btn-large pulse"><i class="material-icons">cloud</i></a>
+      </h4>
+  
+      <div id="fade">
+        <div id="price">
+  
+        </div>
+      </div>
+        <!--div til en tilfældig aktivitet baseret på "price"-->
+      <div id="price">
+      </div>
+
     <!--div til min "alert" besked pop up-->
     <div id="leg">
       <!--div til min aktivitet baseret på "accessibility"-->
@@ -82,13 +97,7 @@
       </div>
     </div>
 
-    <h4 id="fadeIn">
-      Press to watch the magic begin
-    </h4>
 
-      <!--div til en tilfældig aktivitet baseret på "price"-->
-    <div id="price">
-    </div>
 
   </div>
 
@@ -232,6 +241,24 @@
     });
   </script>
 
+  <!--aktivitet ud fra "price"-->
+  <script>
+
+  // Setup handlebars
+  var priceSource = document.getElementById("price-template").innerHTML;
+  var priceTemplate = Handlebars.compile(priceSource);
+  var pricePlaceholder = document.getElementById('price');
+
+
+  // Get content and handle interaction
+  $.ajax({
+  url: "http://www.boredapi.com/api/activity?minprice=0&maxprice=0.5",
+}).done(function (data) {
+  console.log(data)
+  pricePlaceholder.innerHTML = priceTemplate(data);
+});
+  </script>
+
 
 
 <!--Jeg laver en alarm besked ide man kører musen hen over knappen jeg har lavet-->
@@ -247,12 +274,11 @@
 
 <!--Min fadeIn funktion-->
 <script>
+  $('#fade').hide();
   $( document ).ready(function() {
     $('#fadeIn').click(function () {
-      $('#fadeIn').fadeOut(1000)
-    }).done(function(){
-      $('fadeIn').fadeIn(3000);
-    })
+      $('#fade').fadeToggle(2000);
+    });
   });
 </script>
 
