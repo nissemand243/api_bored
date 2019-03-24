@@ -1,3 +1,12 @@
+  Jeg har implementeret 4 felter der søger efter aktiviteter.
+  første felt er en helt tilfældig aktivitet,
+  andet felt er en aktivitet baseret på antal deltagere
+  tredje felt er en aktivitet baseret på prisen
+  fjerde felt er en aktivitet baseret på tilgængeligheden.
+  
+  Jeg har lige nu et problem med en af mine knapper, den virker ikke og det er en fejl i mit "fadeToogle" der er problemet. jeg ved ikke hvorfor den laver fejlen da det først er efter jeg har "pushet" min kode at den ikke længere virker.
+
+
 # api_bored
   This is an example of a very simple app using an API. Namely we use pure javascript embedded directly in an HTML file, to get results from an API called <a href="https://www.boredapi.com/documentation">the "bored" API</a>.
   
@@ -15,5 +24,7 @@
   Lastly - and really the reason we use handlebars - we use a rather complex css boilerplate, <a href="https://materializecss.com/cards.html"> called materialize</a>, which gives us some rather cool layouts. 
   
   Hence the total project presents a set of meaningful skills and architecture in frontend web-programming. 
+  
+  
 
   
