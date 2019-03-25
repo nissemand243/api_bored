@@ -178,7 +178,7 @@
               <p>{{activity}}</p>
             </div>
             <div class="card-action">
-              <a href="http://www.google.com/search?q={{activity}}">Try your luck</a>
+              <a href="https://www.google.com/search?q={{activity}}">Try your luck</a>
             </div>
           </div>
       </div>
@@ -253,7 +253,7 @@
 
   // Get content and handle interaction
   $.ajax({
-  url: "http://www.boredapi.com/api/activity?minprice=0&maxprice=0.5",
+  url: "https://www.boredapi.com/api/activity?minprice=0&maxprice=0.5",
 }).done(function (data) {
   console.log(data)
   pricePlaceholder.innerHTML = priceTemplate(data);
